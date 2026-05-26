@@ -9,7 +9,8 @@ from core.utils.helpers import create_response
 
 from core.routers import (
     text_generation, sentiment, summarization,
-    translation, chatbot, image_caption, object_detection
+    translation, chatbot, image_caption, object_detection,
+    chat_widget
 )
 
 logging.basicConfig(level=logging.INFO)
@@ -35,6 +36,7 @@ app.include_router(translation.router)
 app.include_router(chatbot.router)
 app.include_router(image_caption.router)
 app.include_router(object_detection.router)
+app.include_router(chat_widget.router)
 
 class ContactRequest(BaseModel):
     name: str = Field(..., min_length=1, max_length=100)
