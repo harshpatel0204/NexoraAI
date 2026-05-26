@@ -1,0 +1,98 @@
+export const SERVICES = [
+  {
+    id: 'text-generation',
+    name: 'Text Generation',
+    description: 'Generate creative, factual, or technical text from any prompt using state-of-the-art language models.',
+    badge: 'Generative',
+    badgeColor: 'purple',
+    icon: 'Sparkles',
+    endpoint: '/api/text-generation',
+  },
+  {
+    id: 'sentiment',
+    name: 'Sentiment Analysis',
+    description: 'Classify the emotional tone of text as positive, negative, or neutral with confidence scores.',
+    badge: 'NLP',
+    badgeColor: 'blue',
+    icon: 'Heart',
+    endpoint: '/api/sentiment',
+  },
+  {
+    id: 'summarization',
+    name: 'Text Summarization',
+    description: 'Condense long documents, articles, or reports into concise, readable summaries.',
+    badge: 'NLP',
+    badgeColor: 'blue',
+    icon: 'FileText',
+    endpoint: '/api/summarize',
+  },
+  {
+    id: 'translation',
+    name: 'Language Translation',
+    description: 'Translate text between 50+ languages with high accuracy using neural machine translation.',
+    badge: 'NLP',
+    badgeColor: 'blue',
+    icon: 'Globe',
+    endpoint: '/api/translate',
+  },
+  {
+    id: 'chatbot',
+    name: 'AI Chatbot',
+    description: 'Engage in real-time conversations with an intelligent AI assistant powered by GPT.',
+    badge: 'Generative',
+    badgeColor: 'purple',
+    icon: 'MessageSquare',
+    endpoint: '/api/chatbot',
+  },
+  {
+    id: 'image-caption',
+    name: 'Image Captioning',
+    description: 'Automatically generate descriptive captions for any uploaded image using vision AI.',
+    badge: 'Vision',
+    badgeColor: 'green',
+    icon: 'Image',
+    endpoint: '/api/image-caption',
+  },
+  {
+    id: 'object-detection',
+    name: 'Object Detection',
+    description: 'Detect, classify, and locate objects within images with bounding box visualization.',
+    badge: 'Vision',
+    badgeColor: 'green',
+    icon: 'ScanSearch',
+    endpoint: '/api/object-detection',
+  },
+]
+
+export const LANGUAGES = [
+  { code: 'en', name: 'English' },
+  { code: 'es', name: 'Spanish' },
+  { code: 'fr', name: 'French' },
+  { code: 'de', name: 'German' },
+  { code: 'it', name: 'Italian' },
+  { code: 'pt', name: 'Portuguese' },
+  { code: 'nl', name: 'Dutch' },
+  { code: 'ru', name: 'Russian' },
+  { code: 'zh', name: 'Chinese' },
+  { code: 'ja', name: 'Japanese' },
+  { code: 'ko', name: 'Korean' },
+  { code: 'ar', name: 'Arabic' },
+  { code: 'hi', name: 'Hindi' },
+  { code: 'sv', name: 'Swedish' },
+  { code: 'pl', name: 'Polish' },
+  { code: 'fi', name: 'Finnish' },
+]
+
+export const STATS = [
+  { label: 'AI Services', value: '10+' },
+  { label: 'Uptime', value: '99.9%' },
+  { label: 'Avg. Response', value: '50ms' },
+  { label: 'API Calls/day', value: '10K+' },
+]
+
+export const TEAM_MEMBERS = [
+  { name: 'Dr. Sarah Chen', role: 'CEO & Co-Founder', bio: 'PhD in Machine Learning from Stanford. 15+ years building AI systems at scale.', avatar: '👩‍💻' },
+  { name: 'Alex Rodriguez', role: 'CTO', bio: 'Former Google Brain engineer. Expert in distributed systems and model optimization.', avatar: '👨‍💻' },
+  { name: 'Priya Sharma', role: 'Head of Research', bio: 'Published 40+ papers in NLP and computer vision. Led teams at DeepMind.', avatar: '👩‍🔬' },
+  { name: 'Marcus Johnson', role: 'VP of Engineering', bio: 'Built ML infrastructure serving billions of requests at Meta and AWS.', avatar: '👨‍🔧' },
+]
