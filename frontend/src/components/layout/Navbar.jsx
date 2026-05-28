@@ -9,6 +9,7 @@ const navLinks = [
   { label: 'Case Studies', href: '#results' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'About', href: '#about' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 function Logo() {

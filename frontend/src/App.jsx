@@ -11,7 +11,8 @@ import TechStack from './components/sections/TechStack'
 import Testimonials from './components/sections/Testimonials'
 import Pricing from './components/sections/Pricing'
 import FAQ from './components/sections/FAQ'
-import CTASection from './components/sections/CTASection'
+import AboutUs from './components/sections/AboutUs'
+import ContactUs from './components/sections/ContactUs'
 import ChatWidget from './components/ui/ChatWidget'
 
 const socialProofNames = [
@@ -237,7 +238,8 @@ export default function App() {
         <Testimonials />
         <Pricing />
         <FAQ />
-        <CTASection />
+        <AboutUs />
+        <ContactUs />
       </main>
       <Footer />
       <MobileStickyBar />

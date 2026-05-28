@@ -10,16 +10,16 @@ const solutionLinks = [
 ]
 
 const companyLinks = [
-  { label: 'About', href: '#about' },
+  { label: 'About Us', href: '#about' },
+  { label: 'Contact', href: '#contact' },
   { label: 'Blog', href: '#' },
   { label: 'Careers', href: '#' },
   { label: 'Case Studies', href: '#results' },
-  { label: 'Press Kit', href: '#' },
 ]
 
 export default function Footer() {
   return (
-    <footer id="about" className="bg-neutral-900">
+    <footer className="bg-neutral-900">
       <div className="max-w-6xl mx-auto px-6 md:px-8 py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.2fr] gap-12 lg:gap-8">
           {/* Col 1: Brand */}
