@@ -1,33 +1,33 @@
-import { forwardRef } from 'react'
-import { Loader2 } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 const variants = {
-  primary: 'bg-gradient-to-r from-brand-blue to-brand-violet hover:from-blue-400 hover:to-violet-500 text-white shadow-lg shadow-brand-blue/25',
-  secondary: 'bg-white/10 hover:bg-white/15 text-white border border-white/10',
-  outline: 'border border-brand-blue/50 text-brand-blue hover:bg-brand-blue/10',
-  ghost: 'text-gray-300 hover:text-white hover:bg-white/5',
-  danger: 'bg-red-500/80 hover:bg-red-500 text-white',
+  primary: 'bg-brand-500 hover:bg-brand-600 text-white shadow-btn hover:shadow-btn-lg hover:-translate-y-0.5',
+  secondary: 'bg-white hover:bg-neutral-50 text-neutral-800 border border-neutral-200 hover:border-neutral-300 shadow-card',
+  ghost: 'bg-transparent hover:bg-neutral-50 text-neutral-600 hover:text-neutral-900',
+  cta: 'bg-white text-brand-600 hover:bg-brand-50 hover:shadow-lg',
 }
 
 const sizes = {
-  sm: 'px-3 py-1.5 text-sm',
-  md: 'px-5 py-2.5 text-sm',
-  lg: 'px-8 py-3.5 text-base',
+  sm: 'px-4 py-2 text-sm',
+  md: 'px-6 py-3 text-sm',
+  lg: 'px-8 py-4 text-sm',
 }
 
-const Button = forwardRef(({ children, variant = 'primary', size = 'md', loading = false, disabled = false, className = '', ...props }, ref) => {
+export default function Button({
+  children,
+  variant = 'primary',
+  size = 'md',
+  arrow = false,
+  className = '',
+  ...props
+}) {
   return (
     <button
-      ref={ref}
-      disabled={disabled || loading}
-      className={`inline-flex items-center justify-center gap-2 font-medium rounded-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed ${variants[variant]} ${sizes[size]} ${className}`}
+      className={`inline-flex items-center justify-center gap-2 font-semibold rounded-lg transition-all duration-200 cursor-pointer ${variants[variant]} ${sizes[size]} ${className}`}
       {...props}
     >
-      {loading && <Loader2 className="w-4 h-4 animate-spin" />}
       {children}
+      {arrow && <ArrowRight size={16} />}
     </button>
   )
-})
-
-Button.displayName = 'Button'
-export default Button
+}
