@@ -2,8 +2,8 @@ import { ArrowRight } from 'lucide-react'
 
 const variants = {
   primary: 'bg-brand-500 hover:bg-brand-600 text-white shadow-btn hover:shadow-btn-lg hover:-translate-y-0.5',
-  secondary: 'bg-white hover:bg-neutral-50 text-neutral-800 border border-neutral-200 hover:border-neutral-300 shadow-card',
-  ghost: 'bg-transparent hover:bg-neutral-50 text-neutral-600 hover:text-neutral-900',
+  secondary: 'bg-white dark:bg-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-700 text-neutral-800 dark:text-neutral-200 border border-neutral-200 dark:border-neutral-700 hover:border-neutral-300 dark:hover:border-neutral-600 shadow-card',
+  ghost: 'bg-transparent hover:bg-neutral-50 dark:hover:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white',
   cta: 'bg-white text-brand-600 hover:bg-brand-50 hover:shadow-lg',
 }
 

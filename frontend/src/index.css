@@ -27,6 +27,20 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #9BA8BC;
   }
+
+  .dark ::-webkit-scrollbar-track {
+    background: #1A202C;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: #4A5568;
+  }
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: #6B7A99;
+  }
+  .dark ::selection {
+    background: #1D6ED4;
+    color: #E0EFFF;
+  }
 }
 
 @layer utilities {
@@ -48,4 +62,18 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1A202C;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #4A5568;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6B7A99;
+}
+.dark ::selection {
+  background: #1D6ED4;
+  color: #E0EFFF;
 }

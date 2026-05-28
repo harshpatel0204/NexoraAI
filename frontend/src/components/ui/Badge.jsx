@@ -1,8 +1,8 @@
 const variantStyles = {
-  default: 'bg-neutral-100 text-neutral-600 border-neutral-200',
-  success: 'bg-accent-green/10 text-accent-green border-accent-green/20',
-  brand: 'bg-brand-50 text-brand-700 border-brand-200',
-  warning: 'bg-accent-orange/10 text-accent-orange border-accent-orange/20',
+  default: 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 border-neutral-200 dark:border-neutral-700',
+  success: 'bg-accent-green/10 text-accent-green border-accent-green/20 dark:bg-accent-green/20 dark:text-accent-green',
+  brand: 'bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 border-brand-200 dark:border-brand-800',
+  warning: 'bg-accent-orange/10 text-accent-orange border-accent-orange/20 dark:bg-accent-orange/20 dark:text-accent-orange',
 }
 
 const sizeStyles = {

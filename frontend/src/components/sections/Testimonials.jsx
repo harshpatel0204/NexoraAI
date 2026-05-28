@@ -28,7 +28,7 @@ const cardVariants = {
 
 export default function Testimonials() {
   return (
-    <section className="py-24 md:py-32 bg-neutral-50">
+    <section className="py-24 md:py-32 bg-neutral-50 dark:bg-neutral-800">
       <div className="max-w-6xl mx-auto px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -38,10 +38,10 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <SectionLabel>Testimonials</SectionLabel>
-          <h2 className="font-display font-bold text-display-xl text-neutral-900 tracking-tight mt-4">
+          <h2 className="font-display font-bold text-display-xl text-neutral-900 dark:text-white tracking-tight mt-4">
             Don't Take Our Word For It.
           </h2>
-          <p className="text-neutral-600 mt-5 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-neutral-600 dark:text-neutral-400 mt-5 max-w-2xl mx-auto leading-relaxed">
             Hear from the teams we've helped transform with AI.
           </p>
         </motion.div>
@@ -58,7 +58,7 @@ export default function Testimonials() {
               key={t.id}
               variants={cardVariants}
               whileHover={{ y: -3 }}
-              className="bg-white rounded-xl2 border border-neutral-200 shadow-card hover:shadow-card-md p-7 flex flex-col transition-all duration-300"
+              className="bg-white dark:bg-neutral-800 rounded-xl2 border border-neutral-200 dark:border-neutral-700 shadow-card hover:shadow-card-md p-7 flex flex-col transition-all duration-300"
             >
               {/* Top: Stars + Badge */}
               <div className="flex items-center justify-between mb-5">
@@ -70,25 +70,25 @@ export default function Testimonials() {
 
               {/* Quote */}
               <div className="flex-1 relative">
-                <span className="text-brand-200 font-display text-5xl leading-none absolute -top-2 -left-1">
+                <span className="text-brand-200 dark:text-brand-800/40 font-display text-5xl leading-none absolute -top-2 -left-1">
                   &ldquo;
                 </span>
-                <p className="text-neutral-700 text-base leading-relaxed italic pl-6 pr-2">
+                <p className="text-neutral-700 dark:text-neutral-300 text-base leading-relaxed italic pl-6 pr-2">
                   {t.quote}
                 </p>
-                <span className="text-brand-200 font-display text-5xl leading-none">
+                <span className="text-brand-200 dark:text-brand-800/40 font-display text-5xl leading-none">
                   &rdquo;
                 </span>
               </div>
 
               {/* Author */}
-              <div className="flex items-center gap-3 mt-6 pt-5 border-t border-neutral-100">
+              <div className="flex items-center gap-3 mt-6 pt-5 border-t border-neutral-100 dark:border-neutral-700">
                 <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${t.gradient} flex items-center justify-center flex-shrink-0`}>
                   <span className="text-white text-xs font-bold">{t.initials}</span>
                 </div>
                 <div>
-                  <p className="font-display font-semibold text-neutral-900 text-sm">{t.name}</p>
-                  <p className="text-xs text-neutral-400">{t.title}, {t.company}</p>
+                  <p className="font-display font-semibold text-neutral-900 dark:text-white text-sm">{t.name}</p>
+                  <p className="text-xs text-neutral-400 dark:text-neutral-500">{t.title}, {t.company}</p>
                 </div>
               </div>
             </motion.div>

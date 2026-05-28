@@ -8,10 +8,10 @@ const iconMap = {
 }
 
 const colorMap = {
-  brand:  { bg: 'bg-brand-50',  text: 'text-brand-500' },
-  purple: { bg: 'bg-purple-50',  text: 'text-purple-500' },
-  teal:   { bg: 'bg-teal-50',   text: 'text-accent-teal' },
-  orange: { bg: 'bg-orange-50',  text: 'text-accent-orange' },
+  brand:  { bg: 'bg-brand-50 dark:bg-brand-900/20',  text: 'text-brand-500 dark:text-brand-400' },
+  purple: { bg: 'bg-purple-50 dark:bg-purple-900/20',  text: 'text-purple-500 dark:text-purple-400' },
+  teal:   { bg: 'bg-teal-50 dark:bg-teal-900/20',   text: 'text-accent-teal' },
+  orange: { bg: 'bg-orange-50 dark:bg-orange-900/20',  text: 'text-accent-orange' },
 }
 
 const containerVariants = {
@@ -28,16 +28,16 @@ const cardVariants = {
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 md:py-32 bg-white">
+    <section id="services" className="py-24 md:py-32 bg-white dark:bg-neutral-900">
       <div className="max-w-6xl mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-12 lg:gap-16 items-start">
           {/* Left: sticky header */}
           <div className="lg:sticky lg:top-28">
             <SectionLabel>What We Build</SectionLabel>
-            <h2 className="font-display font-bold text-display-xl text-neutral-900 tracking-tight mt-4">
+            <h2 className="font-display font-bold text-display-xl text-neutral-900 dark:text-white tracking-tight mt-4">
               Every AI Capability,<br />Under One Roof.
             </h2>
-            <p className="text-neutral-600 mt-5 leading-relaxed">
+            <p className="text-neutral-600 dark:text-neutral-400 mt-5 leading-relaxed">
               From quick-win automations to full AI infrastructure — we cover the complete spectrum so you work with one trusted team, not five different agencies.
             </p>
             <a
@@ -65,7 +65,7 @@ export default function Services() {
                   key={service.id}
                   variants={cardVariants}
                   whileHover={{ y: -2 }}
-                  className="bg-white rounded-xl2 border border-neutral-200 shadow-card hover:shadow-card-md hover:border-neutral-300 transition-all duration-300 p-7 group cursor-pointer"
+                  className="bg-white dark:bg-neutral-800 rounded-xl2 border border-neutral-200 dark:border-neutral-700 shadow-card hover:shadow-card-md hover:border-neutral-300 dark:hover:border-neutral-600 transition-all duration-300 p-7 group cursor-pointer"
                 >
                   {/* Icon */}
                   <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-5 ${colors.bg} ${colors.text}`}>
@@ -73,15 +73,15 @@ export default function Services() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-display font-semibold text-neutral-900 text-lg">{service.title}</h3>
+                  <h3 className="font-display font-semibold text-neutral-900 dark:text-white text-lg">{service.title}</h3>
 
                   {/* Description */}
-                  <p className="text-neutral-500 text-sm leading-relaxed mt-2">{service.description}</p>
+                  <p className="text-neutral-500 dark:text-neutral-400 text-sm leading-relaxed mt-2">{service.description}</p>
 
                   {/* Highlights */}
                   <ul className="mt-5 space-y-1.5">
                     {service.highlights.map((h) => (
-                      <li key={h} className="flex items-center gap-2 text-xs text-neutral-500">
+                      <li key={h} className="flex items-center gap-2 text-xs text-neutral-500 dark:text-neutral-400">
                         <Check size={12} className="text-accent-green flex-shrink-0" />
                         {h}
                       </li>

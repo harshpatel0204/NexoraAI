@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Phone, FileText, Code2, Rocket } from 'lucide-react'
 import SectionLabel from '../ui/SectionLabel'
+import { useTheme } from '../../context/ThemeContext'
 
 const iconMap = { Phone, FileText, Code2, Rocket }
 
@@ -37,6 +38,7 @@ const steps = [
 ]
 
 export default function HowItWorks() {
+  const { isDark } = useTheme()
   const [active, setActive] = useState(0)
 
   useEffect(() => {
@@ -47,7 +49,7 @@ export default function HowItWorks() {
   }, [])
 
   return (
-    <section id="process" className="py-24 md:py-32 bg-neutral-50">
+    <section id="process" className="py-24 md:py-32 bg-neutral-50 dark:bg-neutral-800">
       <div className="max-w-6xl mx-auto px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -57,10 +59,10 @@ export default function HowItWorks() {
           className="text-center mb-16"
         >
           <SectionLabel>Our Process</SectionLabel>
-          <h2 className="font-display font-bold text-display-xl text-neutral-900 tracking-tight mt-4">
+          <h2 className="font-display font-bold text-display-xl text-neutral-900 dark:text-white tracking-tight mt-4">
             From Idea to Production<br />in Weeks, Not Months.
           </h2>
-          <p className="text-neutral-600 mt-5 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-neutral-600 dark:text-neutral-400 mt-5 max-w-2xl mx-auto leading-relaxed">
             A proven four-step process refined over 120+ projects. No guesswork, no scope creep — just clear milestones and working software.
           </p>
         </motion.div>
@@ -70,7 +72,7 @@ export default function HowItWorks() {
           {/* Progress line container */}
           <div className="relative flex items-center justify-between mb-12">
             {/* Background line */}
-            <div className="absolute top-5 left-[5%] right-[5%] h-px bg-neutral-200" />
+            <div className="absolute top-5 left-[5%] right-[5%] h-px bg-neutral-200 dark:bg-neutral-700" />
             {/* Active line */}
             <motion.div
               className="absolute top-5 left-[5%] h-px bg-brand-500"
@@ -87,16 +89,18 @@ export default function HowItWorks() {
               >
                 <motion.div
                   animate={{
-                    borderColor: i <= active ? '#2B7FE8' : '#E4E8F0',
-                    color: i <= active ? '#2B7FE8' : '#9BA8BC',
-                    backgroundColor: i <= active ? '#F0F7FF' : '#FFFFFF',
+                    borderColor: i <= active ? '#2B7FE8' : (isDark ? '#2D3748' : '#E4E8F0'),
+                    color: i <= active ? '#2B7FE8' : (isDark ? '#4A5568' : '#9BA8BC'),
+                    backgroundColor: i <= active 
+                      ? (isDark ? 'rgba(43,127,232,0.15)' : '#F0F7FF') 
+                      : (isDark ? '#1A202C' : '#FFFFFF'),
                   }}
                   className="w-10 h-10 rounded-full border-2 flex items-center justify-center text-sm font-bold font-display bg-white transition-all"
                 >
                   {step.num}
                 </motion.div>
                 <span className={`text-xs font-semibold transition-colors ${
-                  i <= active ? 'text-brand-600' : 'text-neutral-400'
+                  i <= active ? 'text-brand-600 dark:text-brand-400' : 'text-neutral-400 dark:text-neutral-500'
                 }`}>
                   {step.title}
                 </span>
@@ -113,22 +117,26 @@ export default function HowItWorks() {
                   key={step.num}
                   layout
                   animate={{
-                    borderColor: i === active ? '#C2DFFF' : '#E4E8F0',
+                    borderColor: i === active 
+                      ? '#2B7FE8' 
+                      : (isDark ? '#2D3748' : '#E4E8F0'),
                     boxShadow: i === active
                       ? '0 2px 8px rgba(0,0,0,0.07), 0 8px 32px rgba(0,0,0,0.05)'
                       : '0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04)',
                   }}
-                  className="bg-white rounded-xl2 border p-7 cursor-pointer"
+                  className="bg-white dark:bg-neutral-900 rounded-xl2 border border-neutral-200 dark:border-neutral-700 p-7 cursor-pointer"
                   onClick={() => setActive(i)}
                 >
                   <div className={`w-9 h-9 rounded-lg flex items-center justify-center mb-4 ${
-                    i === active ? 'bg-brand-50 text-brand-500' : 'bg-neutral-50 text-neutral-400'
+                    i === active 
+                      ? 'bg-brand-50 dark:bg-brand-900/20 text-brand-500 dark:text-brand-400' 
+                      : 'bg-neutral-50 dark:bg-neutral-800 text-neutral-400 dark:text-neutral-500'
                   } transition-colors`}>
                     {Icon && <Icon size={18} />}
                   </div>
-                  <span className="text-xs font-semibold text-neutral-400 uppercase tracking-wider">{step.time}</span>
-                  <h3 className="font-display font-semibold text-neutral-900 text-base mt-1.5">{step.title}</h3>
-                  <p className="text-neutral-500 text-sm leading-relaxed mt-2">{step.body}</p>
+                  <span className="text-xs font-semibold text-neutral-400 dark:text-neutral-500 uppercase tracking-wider">{step.time}</span>
+                  <h3 className="font-display font-semibold text-neutral-900 dark:text-white text-base mt-1.5">{step.title}</h3>
+                  <p className="text-neutral-500 dark:text-neutral-400 text-sm leading-relaxed mt-2">{step.body}</p>
                 </motion.div>
               )
             })}
@@ -151,19 +159,19 @@ export default function HowItWorks() {
                 <div className="flex flex-col items-center">
                   <div className={`w-10 h-10 rounded-full border-2 flex items-center justify-center text-sm font-bold font-display ${
                     i <= active
-                      ? 'border-brand-500 text-brand-500 bg-brand-50'
-                      : 'border-neutral-200 text-neutral-400 bg-white'
+                      ? 'border-brand-500 text-brand-500 bg-brand-50 dark:bg-brand-900/30'
+                      : 'border-neutral-200 dark:border-neutral-800 text-neutral-400 dark:text-neutral-500 bg-white dark:bg-neutral-900'
                   }`}>
                     {step.num}
                   </div>
                   {i < steps.length - 1 && (
-                    <div className="w-px h-full bg-neutral-200 mt-2" />
+                    <div className="w-px h-full bg-neutral-200 dark:bg-neutral-700 mt-2" />
                   )}
                 </div>
                 <div className="pb-8">
-                  <span className="text-xs font-semibold text-neutral-400 uppercase tracking-wider">{step.time}</span>
-                  <h3 className="font-display font-semibold text-neutral-900 text-base mt-1">{step.title}</h3>
-                  <p className="text-neutral-500 text-sm leading-relaxed mt-1.5">{step.body}</p>
+                  <span className="text-xs font-semibold text-neutral-400 dark:text-neutral-500 uppercase tracking-wider">{step.time}</span>
+                  <h3 className="font-display font-semibold text-neutral-900 dark:text-white text-base mt-1">{step.title}</h3>
+                  <p className="text-neutral-500 dark:text-neutral-400 text-sm leading-relaxed mt-1.5">{step.body}</p>
                 </div>
               </motion.div>
             )

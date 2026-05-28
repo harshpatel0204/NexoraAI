@@ -12,6 +12,7 @@ import Testimonials from './components/sections/Testimonials'
 import Pricing from './components/sections/Pricing'
 import FAQ from './components/sections/FAQ'
 import CTASection from './components/sections/CTASection'
+import ChatWidget from './components/ui/ChatWidget'
 
 const socialProofNames = [
   { name: 'Rajesh', city: 'Mumbai' },
@@ -63,14 +64,14 @@ function SocialProofPopup() {
           animate={{ opacity: 1, x: 0, y: 0 }}
           exit={{ opacity: 0, x: -80, y: 20 }}
           transition={{ duration: 0.4, ease: 'easeOut' }}
-          className="fixed bottom-6 left-6 z-50 hidden md:flex items-center gap-3 bg-white border border-neutral-200 shadow-card-md rounded-xl px-5 py-3.5"
+          className="fixed bottom-6 left-6 z-50 hidden md:flex items-center gap-3 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 shadow-card-md rounded-xl px-5 py-3.5 text-neutral-800 dark:text-neutral-200"
         >
           <span className="text-lg">🎉</span>
           <div>
-            <p className="text-sm font-medium text-neutral-800">
+            <p className="text-sm font-medium text-neutral-800 dark:text-neutral-200">
               {person.name} from {person.city} just booked a discovery call
             </p>
-            <p className="text-xs text-neutral-400 mt-0.5">A few moments ago</p>
+            <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">A few moments ago</p>
           </div>
         </motion.div>
       )}
@@ -115,12 +116,12 @@ function ExitIntentModal() {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.9 }}
           transition={{ duration: 0.3, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="bg-white rounded-xl3 shadow-card-lg p-10 max-w-md w-full relative"
+          className="bg-white dark:bg-neutral-800 rounded-xl3 shadow-card-lg p-10 max-w-md w-full relative border border-neutral-200 dark:border-neutral-700"
           onClick={e => e.stopPropagation()}
         >
           <button
             onClick={() => setShow(false)}
-            className="absolute top-4 right-4 text-neutral-400 hover:text-neutral-700 transition-colors"
+            className="absolute top-4 right-4 text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 transition-colors"
             aria-label="Close modal"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -136,18 +137,18 @@ function ExitIntentModal() {
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
               </div>
-              <h3 className="font-display font-bold text-neutral-900 text-xl">Check your inbox!</h3>
-              <p className="text-neutral-500 text-sm mt-2">We've sent the AI Readiness Checklist to your email.</p>
+              <h3 className="font-display font-bold text-neutral-900 dark:text-white text-xl">Check your inbox!</h3>
+              <p className="text-neutral-500 dark:text-neutral-400 text-sm mt-2">We've sent the AI Readiness Checklist to your email.</p>
             </div>
           ) : (
             <>
               <div className="text-center mb-6">
-                <span className="inline-flex items-center gap-1.5 bg-brand-50 text-brand-700 text-xs font-semibold px-3 py-1 rounded-full border border-brand-200 mb-4">
+                <span className="inline-flex items-center gap-1.5 bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 text-xs font-semibold px-3 py-1 rounded-full border border-brand-200 dark:border-brand-800 mb-4">
                   📋 Free Resource
                 </span>
-                <h3 className="font-display font-bold text-neutral-900 text-2xl">Before you go...</h3>
-                <p className="text-neutral-500 text-sm mt-2 leading-relaxed">
-                  Get our free <span className="font-semibold text-neutral-700">AI Readiness Checklist</span> — 23 questions to evaluate if your business is ready for AI.
+                <h3 className="font-display font-bold text-neutral-900 dark:text-white text-2xl">Before you go...</h3>
+                <p className="text-neutral-500 dark:text-neutral-400 text-sm mt-2 leading-relaxed">
+                  Get our free <span className="font-semibold text-neutral-700 dark:text-neutral-300">AI Readiness Checklist</span> — 23 questions to evaluate if your business is ready for AI.
                 </p>
               </div>
               <form onSubmit={handleSubmit} className="space-y-3">
@@ -157,7 +158,7 @@ function ExitIntentModal() {
                   onChange={e => setEmail(e.target.value)}
                   placeholder="Enter your work email"
                   required
-                  className="w-full border border-neutral-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:border-brand-400 transition-all"
+                  className="w-full border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:border-brand-400 dark:focus:border-brand-500 transition-all"
                   aria-label="Email address"
                 />
                 <button
@@ -167,7 +168,7 @@ function ExitIntentModal() {
                   Send Me the Checklist →
                 </button>
               </form>
-              <p className="text-xs text-neutral-400 text-center mt-3">No spam. Unsubscribe anytime.</p>
+              <p className="text-xs text-neutral-400 dark:text-neutral-550 text-center mt-3">No spam. Unsubscribe anytime.</p>
             </>
           )}
         </motion.div>
@@ -207,7 +208,7 @@ function MobileStickyBar() {
           animate={{ y: 0 }}
           exit={{ y: 100 }}
           transition={{ duration: 0.3 }}
-          className="fixed bottom-0 left-0 right-0 bg-white border-t border-neutral-200 p-4 z-50 md:hidden"
+          className="fixed bottom-0 left-0 right-0 bg-white dark:bg-neutral-800 border-t border-neutral-200 dark:border-neutral-700 p-4 z-50 md:hidden"
         >
           <a
             href="#contact"
@@ -223,7 +224,7 @@ function MobileStickyBar() {
 
 export default function App() {
   return (
-    <div className="font-body bg-white text-neutral-900 antialiased overflow-x-hidden">
+    <div className="font-body bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 antialiased overflow-x-hidden transition-colors duration-300">
       <ScrollProgress />
       <Navbar />
       <main>
@@ -242,6 +243,7 @@ export default function App() {
       <MobileStickyBar />
       <SocialProofPopup />
       <ExitIntentModal />
+      <ChatWidget />
     </div>
   )
 }
