@@ -124,7 +124,7 @@ export default function About() {
             </motion.div>
 
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-              <span className="gradient-text">About NeuralNexus</span>
+              <span className="gradient-text">About NexoraAI</span>
             </h1>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
               Passionate about pushing the boundaries of what's possible with AI. I build intelligent systems that don't just work — they <span className="text-white font-medium">transform how people interact with technology</span>.

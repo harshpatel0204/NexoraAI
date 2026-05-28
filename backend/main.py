@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 startup_time = time.time()
 
 app = FastAPI(
-    title="NeuralNexus AI API",
+    title="NexoraAI API",
     description="Production-grade AI/ML services platform",
     version="1.0.0",
     docs_url="/api/docs",

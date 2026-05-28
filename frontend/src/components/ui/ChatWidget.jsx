@@ -10,7 +10,7 @@ export default function ChatWidget() {
   const [history, setHistory] = useState([
     {
       role: 'assistant',
-      content: "Hi! 👋 I'm the NeuroniqAI Assistant. I can help you with questions about our AI services, pricing, and how we can help your business. What would you like to know?"
+      content: "Hi! 👋 I'm the NexoraAI Assistant. I can help you with questions about our AI services, pricing, and how we can help your business. What would you like to know?"
     }
   ])
   const [isLoading, setIsLoading] = useState(false)
@@ -133,7 +133,7 @@ export default function ChatWidget() {
                   <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-accent-green rounded-full border-2 border-brand-500" />
                 </div>
                 <div>
-                  <h3 className="font-display font-bold text-sm tracking-wide">NeuroniqAI Assistant</h3>
+                  <h3 className="font-display font-bold text-sm tracking-wide">NexoraAI Assistant</h3>
                   <div className="flex items-center gap-1">
                     <span className="text-[10px] text-brand-100 font-medium">AI Agent</span>
                     <Sparkles size={10} className="text-brand-200" />
@@ -202,7 +202,7 @@ export default function ChatWidget() {
                 type="text"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Ask NeuroniqAI assistant..."
+                placeholder="Ask NexoraAI assistant..."
                 className="flex-1 px-4 py-2 text-sm bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:border-brand-400 dark:focus:border-brand-500 dark:text-white transition-all"
                 disabled={isLoading}
               />

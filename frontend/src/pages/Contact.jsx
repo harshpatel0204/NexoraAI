@@ -5,7 +5,7 @@ import Card from '../components/ui/Card'
 import Button from '../components/ui/Button'
 
 const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'hello@neuralnexus.ai', href: 'mailto:hello@neuralnexus.ai', color: '#3B82F6' },
+  { icon: Mail, label: 'Email', value: 'hello@nexora.ai', href: 'mailto:hello@nexora.ai', color: '#3B82F6' },
   { icon: MapPin, label: 'Location', value: 'Remote / Worldwide', href: null, color: '#A855F7' },
   { icon: MessageSquare, label: 'Response Time', value: 'Within 24 hours', href: null, color: '#00D4FF' },
 ]

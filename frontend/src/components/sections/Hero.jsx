@@ -29,7 +29,7 @@ function DashboardMockup() {
         </div>
         <div className="flex-1 text-center">
           <span className="text-xs text-neutral-400 dark:text-neutral-500 bg-white dark:bg-neutral-800 px-4 py-1 rounded-md border border-neutral-200 dark:border-neutral-700 font-mono">
-            app.neuroniq.ai/dashboard
+            app.nexora.ai/dashboard
           </span>
         </div>
       </div>

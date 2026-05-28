@@ -27,7 +27,7 @@ function Logo() {
           <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" repeatCount="indefinite" />
         </circle>
       </svg>
-      <span className="font-display font-bold text-neutral-900 dark:text-white text-lg">NeuroniqAI</span>
+      <span className="font-display font-bold text-neutral-900 dark:text-white text-lg">NexoraAI</span>
     </a>
   )
 }

@@ -15,10 +15,10 @@ logger = get_logger(__name__)
 # Disable tracing — we're not sending traces to OpenAI servers
 set_tracing_disabled(True)
 
-SYSTEM_PROMPT = """You are NeuroniqAI Assistant — the official support chatbot for NeuroniqAI.
+SYSTEM_PROMPT = """You are NexoraAI Assistant — the official support chatbot for NexoraAI.
 
-## About NeuroniqAI
-NeuroniqAI is an AI services agency that builds, deploys, and scales custom AI solutions for businesses ready to see real ROI. We are the AI partner that delivers, not just promises.
+## About NexoraAI
+NexoraAI is an AI services agency that builds, deploys, and scales custom AI solutions for businesses ready to see real ROI. We are the AI partner that delivers, not just promises.
 
 ### Our 6 Core Services:
 1. **AI Agents & Automation** — Custom intelligent agents that handle complex, multi-step workflows (document processing, email triage, scheduling, data entry, decision pipelines). Built with LangGraph orchestration, human-in-the-loop, Slack/Email integration.
@@ -37,7 +37,7 @@ NeuroniqAI is an AI services agency that builds, deploys, and scales custom AI s
 - Rated #1 AI Services Partner — G2 Spring 2025
 - 120+ companies already using AI with us
 - Based in Mumbai, India
-- Contact: hello@neuroniq.ai, +91 98765 43210
+- Contact: hello@nexora.ai, +91 98765 43210
 - Tech stack: React + Vite + TailwindCSS (frontend), Python FastAPI + HuggingFace + OpenAI (backend), deployed on Vercel
 
 ### FAQs:
@@ -48,8 +48,8 @@ NeuroniqAI is an AI services agency that builds, deploys, and scales custom AI s
 - Proof of concept: 3–4 weeks; full production system: 6–10 weeks
 
 ## Your Behavior Rules
-- ONLY answer questions related to NeuroniqAI, its services, pricing, process, team, and general AI/ML concepts as they relate to the company.
-- If a user asks something completely unrelated (e.g., cooking, sports, politics), politely redirect them: "I'm the NeuroniqAI assistant and I can help you with questions about our AI services, pricing, and how we can help your business. Is there anything about NeuroniqAI I can help you with?"
+- ONLY answer questions related to NexoraAI, its services, pricing, process, team, and general AI/ML concepts as they relate to the company.
+- If a user asks something completely unrelated (e.g., cooking, sports, politics), politely redirect them: "I'm the NexoraAI assistant and I can help you with questions about our AI services, pricing, and how we can help your business. Is there anything about NexoraAI I can help you with?"
 - Be concise, friendly, and professional.
 - Encourage users to book a discovery call for detailed project discussions.
 - If unsure about something, say so honestly rather than making things up.
@@ -74,7 +74,7 @@ def _build_agent() -> Agent | None:
         )
 
         agent = Agent(
-            name="NeuroniqAI Assistant",
+            name="NexoraAI Assistant",
             instructions=SYSTEM_PROMPT,
             model=model,
         )
@@ -132,7 +132,7 @@ def _mock_reply(message: str) -> str:
     msg = message.lower()
     if any(w in msg for w in ["hello", "hi", "hey"]):
         return (
-            "Hello! 👋 I'm the NeuroniqAI Assistant. I can help you with questions "
+            "Hello! 👋 I'm the NexoraAI Assistant. I can help you with questions "
             "about our AI services, pricing, and how we can help your business. What would you like to know?"
         )
     elif "pric" in msg:
@@ -145,13 +145,13 @@ def _mock_reply(message: str) -> str:
         )
     elif "service" in msg:
         return (
-            "NeuroniqAI offers 6 core services:\n\n"
+            "NexoraAI offers 6 core services:\n\n"
             "1. AI Agents & Automation\n2. Custom Chatbots & Copilots\n3. Computer Vision\n"
             "4. Data Intelligence\n5. LLM Fine-tuning & RAG\n6. AI Strategy & Audit\n\n"
             "Would you like to learn more about any of these?"
         )
     else:
         return (
-            f"Great question! I'm here to help with anything related to NeuroniqAI — "
+            f"Great question! I'm here to help with anything related to NexoraAI — "
             f"our services, pricing, process, or how we can help your business. Could you tell me more about what you need?"
         )

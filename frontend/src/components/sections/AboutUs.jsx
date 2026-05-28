@@ -45,7 +45,7 @@ const stats = [
 ]
 
 const milestones = [
-  { year: '2021', title: 'Founded in Mumbai', desc: 'NeuroniqAI was born from a simple idea — make enterprise AI accessible to businesses of all sizes.' },
+  { year: '2021', title: 'Founded in Mumbai', desc: 'NexoraAI was born from a simple idea — make enterprise AI accessible to businesses of all sizes.' },
   { year: '2022', title: 'First 10 Clients', desc: 'Delivered our first production AI systems — chatbots, automation pipelines, and custom NLP solutions.' },
   { year: '2023', title: 'Scaled to 30+ Projects', desc: 'Expanded into computer vision, generative AI, and built our repeatable delivery framework.' },
   { year: '2024', title: 'Global Reach', desc: 'Partnered with companies across India, US, UK, and UAE. Grew the team to 12 AI engineers.' },
@@ -86,7 +86,7 @@ export default function AboutUs() {
             We Build AI That<br />Actually Works.
           </h2>
           <p className="text-neutral-600 dark:text-neutral-400 mt-5 max-w-2xl mx-auto leading-relaxed text-lg">
-            NeuroniqAI is a team of AI engineers, researchers, and product builders on a mission to help businesses harness the real power of artificial intelligence — not the hype, but the results.
+            NexoraAI is a team of AI engineers, researchers, and product builders on a mission to help businesses harness the real power of artificial intelligence — not the hype, but the results.
           </p>
         </motion.div>
 
@@ -126,7 +126,7 @@ export default function AboutUs() {
             </h3>
             <div className="mt-6 space-y-4 text-neutral-600 dark:text-neutral-400 leading-relaxed">
               <p>
-                We started NeuroniqAI because we saw a gap: businesses wanted AI, but the path from idea to production was too complex, too expensive, and too risky.
+                We started NexoraAI because we saw a gap: businesses wanted AI, but the path from idea to production was too complex, too expensive, and too risky.
               </p>
               <p>
                 Most agencies deliver impressive demos that never make it to production. We took the opposite approach — <span className="font-semibold text-neutral-800 dark:text-neutral-200">every solution we build is production-ready from day one</span>.

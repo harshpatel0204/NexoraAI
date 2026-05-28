@@ -33,7 +33,7 @@ export default function Footer() {
                 <line x1="16" y1="11" x2="24" y2="19" stroke="#5FA8F5" strokeWidth="1.5" opacity="0.5" />
                 <line x1="11" y1="22" x2="21" y2="22" stroke="#5FA8F5" strokeWidth="1.5" opacity="0.5" />
               </svg>
-              <span className="font-display font-bold text-white text-lg">NeuroniqAI</span>
+              <span className="font-display font-bold text-white text-lg">NexoraAI</span>
             </div>
             <p className="text-neutral-400 text-sm leading-relaxed max-w-xs mb-6">
               We build, deploy, and scale custom AI solutions for businesses ready to move beyond the hype and see real ROI.
@@ -93,9 +93,9 @@ export default function Footer() {
             <h4 className="text-neutral-200 text-sm font-semibold mb-4">Get in Touch</h4>
             <ul className="space-y-3">
               <li>
-                <a href="mailto:hello@neuroniq.ai" className="flex items-center gap-2.5 text-neutral-400 text-sm hover:text-neutral-100 transition-colors">
+                <a href="mailto:hello@nexora.ai" className="flex items-center gap-2.5 text-neutral-400 text-sm hover:text-neutral-100 transition-colors">
                   <Mail size={14} className="flex-shrink-0" />
-                  hello@neuroniq.ai
+                  hello@nexora.ai
                 </a>
               </li>
               <li>
@@ -125,7 +125,7 @@ export default function Footer() {
       <div className="border-t border-neutral-800">
         <div className="max-w-6xl mx-auto px-6 md:px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-neutral-500 text-xs">
-            Built with care in India 🇮🇳 · © 2025 NeuroniqAI. All rights reserved.
+            Built with care in India 🇮🇳 · © 2025 NexoraAI. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a href="#" className="text-neutral-500 text-xs hover:text-neutral-300 transition-colors">Privacy Policy</a>

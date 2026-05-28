@@ -50,7 +50,7 @@ class LLMService:
     async def chat_completion(self, message: str, history: list[dict]) -> dict:
         try:
             client = self._get_client()
-            system_msg = {"role": "system", "content": "You are NeuralNexus AI, a helpful and knowledgeable assistant specializing in AI and machine learning. Be concise and informative."}
+            system_msg = {"role": "system", "content": "You are NexoraAI, a helpful and knowledgeable assistant specializing in AI and machine learning. Be concise and informative."}
             messages = [system_msg] + history + [{"role": "user", "content": message}]
             if client:
                 response = client.chat.completions.create(
@@ -78,7 +78,7 @@ class LLMService:
     def _mock_chat(self, message: str) -> str:
         msg = message.lower()
         if "hello" in msg or "hi" in msg:
-            return "Hello! I'm NeuralNexus AI. I can help you with questions about AI, machine learning, deep learning, and more. What would you like to know?"
+            return "Hello! I'm NexoraAI. I can help you with questions about AI, machine learning, deep learning, and more. What would you like to know?"
         elif "machine learning" in msg:
             return "Machine learning is a subset of AI that enables systems to learn from data without being explicitly programmed. It includes supervised learning, unsupervised learning, and reinforcement learning. Would you like to dive deeper into any of these?"
         elif "deep learning" in msg:

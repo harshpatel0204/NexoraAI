@@ -1,7 +1,7 @@
 export const testimonials = [
   {
     id: 1,
-    quote: 'NeuroniqAI didn\'t just ship us a chatbot. They rethought our entire support infrastructure. We handle 3× the volume with half the headcount. That\'s a real business outcome.',
+    quote: 'NexoraAI didn\'t just ship us a chatbot. They rethought our entire support infrastructure. We handle 3× the volume with half the headcount. That\'s a real business outcome.',
     name: 'Sarah Chen',
     title: 'VP Operations',
     company: 'Pulse Commerce',
